@@ -13,6 +13,7 @@ import rx.Observable;
  */
 
 public interface GithubApiService {
+
     @GET("/users/{user}/repos")
     Observable<ArrayList<Repo>> getRepoData(@Path("user") String user);
 }
