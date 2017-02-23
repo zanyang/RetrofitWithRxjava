@@ -3,7 +3,6 @@ package com.sangebaba.retrofit;
 
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
-import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.support.v7.widget.RecyclerView;
@@ -11,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import com.sangebaba.adapter.MyListAdapter;
 import com.sangebaba.base.BaseActivity;
 import com.sangebaba.bean.Repo;
+import com.sangebaba.service.GithubApiService;
 
 import java.util.ArrayList;
 

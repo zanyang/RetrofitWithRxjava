@@ -4,15 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
-import com.jakewharton.rxbinding.view.RxView;
 import com.sangebaba.base.BaseActivity;
 import com.sangebaba.util.DebugLog;
 import com.tbruyelle.rxpermissions2.RxPermissions;
 
 import java.util.concurrent.TimeUnit;
-import java.util.jar.Manifest;
 
 import butterknife.Bind;
 import butterknife.OnClick;
@@ -27,6 +24,8 @@ public class MainActivity extends BaseActivity {
 
     @Bind(R.id.showButton)
     Button showButton;
+    @Bind(R.id.btn_gank)
+    Button btnGank;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +67,7 @@ public class MainActivity extends BaseActivity {
         // TODO: 2016/12/20 rxpermissions
         final RxPermissions rxPermissions = new RxPermissions(this);
 
+
     }
 
     @Override
@@ -79,6 +79,12 @@ public class MainActivity extends BaseActivity {
     public void onShowRepositoriesClick(View view) {
         DebugLog.i("onclick");
         Intent intent = new Intent(this, ReposListActivity.class);
+        startActivity(intent);
+
+    }
+    @OnClick(R.id.btn_gank)
+    public void onGankClick(View view) {
+        Intent intent = new Intent(this, GankListActivity.class);
         startActivity(intent);
 
     }

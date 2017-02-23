@@ -1,5 +1,6 @@
-package com.sangebaba.retrofit;
+package com.sangebaba.service;
 
+import com.sangebaba.bean.GankResultBean;
 import com.sangebaba.bean.Repo;
 
 import java.util.ArrayList;
@@ -16,4 +17,7 @@ public interface GithubApiService {
 
     @GET("/users/{user}/repos")
     Observable<ArrayList<Repo>> getRepoData(@Path("user") String user);
+
+    @GET("all/20/{page}")
+    Observable<GankResultBean> getAndroidData(@Path("page") int page);
 }
